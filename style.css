@@ -1,18 +1,40 @@
-.fontVal{
-    font-family: "Comic Sans MS";
-    font-size: 100px;
-}
-
-.fontTitle{
-    font-family: "Comic Sans MS";
-    font-size: 30px;
-}
-
 body{
     text-align: center;
     padding: 100px;
     height: 100vh;
-    background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);
+    opacity: 1.0;
+    /* background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%); */
+    /* background-image: linear-gradient(to right, #a8caba 0%, #5d4157 100%); */
+    /* background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%); */
+    background: transparentColor, url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/Ha0T59ZIiq18yt35/animated-background-with-rural-landscape-with-country-houses-trees-and-clouds-town-landscape-seamless-loop-animation_hvy55hau__F0000.png);
+}
+
+.bg{
+    background: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/Ha0T59ZIiq18yt35/animated-background-with-rural-landscape-with-country-houses-trees-and-clouds-town-landscape-seamless-loop-animation_hvy55hau__F0000.png);
+    background-size: cover;
+}
+
+.fontVal{
+    font-family: 'Comic Sans MS';
+    font-size: 100px;
+}
+
+.fontTitle{
+    font-family: 'Comic Sans MS';
+    font-size: 30px;
+}
+
+.fontText{
+    font-family: 'Comic Sans MS';
+    font-size: 30px;
+}
+
+.modeHeight{
+    height: 100px;
+}
+
+.valHeight{
+    height: 200px;
 }
 
 .toggle-off {
@@ -25,8 +47,5 @@ body{
 .toggle-handle {
     background-color: white;
     border: thin rgba(0, 0, 0, .25) solid;
-}
-
-.modeHeight{
-    height: 100px;
+    width: 50px;
 }

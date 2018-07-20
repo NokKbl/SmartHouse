@@ -21,50 +21,54 @@
             <div class="col-4" style="position: absolute; top: 46px; right: 8px;">
                 <label class="fontTitle">Mode: </label>
                 <br>
-                <label>Manual </label>
+                <label >Manual </label>
                 <input id="mode-tog" type="checkbox" checked data-toggle="toggle">
                 <label>Auto</label>
             </div>
         </div>
-        <div class="row">
+        <div class="row valHeight">
             <div class="col-4">
-                <label>Temperature: </label>
+                <label class="fontTitle">Temperature: </label>
                 <br>
                 <label id="temp-val" class="fontVal">00</label>
-                <label>°C</label>
+                <label class="fontTitle">°C</label>
             </div>
             <div class="col-4">
-                <label>Humidity: </label>
+                <label class="fontTitle">Humidity: </label>
                 <br>
                 <label id="humi-val" class="fontVal">00.0</label>
-                <label>%</label>
+                <label class="fontTitle">%</label>
             </div>
             <div class="col-4">
-                <label>Intensity: </label>
+                <label class="fontTitle">Intensity: </label>
                 <br>
                 <label id="intense-val" class="fontVal">00</label>
-                <label>lux</label>
+                <label class="fontTitle">lux</label>
             </div>
         </div>
         <div class="row">
             <div class="col-3">
-                <img src="https://image.ibb.co/h9Y7yd/realdoor.png" alt="door" height="300px">
+                <img id="door-img" src="https://image.ibb.co/h9Y7yd/realdoor.png" alt="door" height="300px">
                 <br><br>
+                <label class="fontText">Door: </label>
                 <input id="door-tog" type="checkbox" checked data-toggle="toggle">
             </div>
             <div class="col-3">
-                <img src="https://image.ibb.co/noBhWy/reallight.png" alt="light" height="300px">
+                <img id="light-img" src="https://image.ibb.co/noBhWy/reallight.png" alt="light" height="300px">
                 <br><br>
+                <label class="fontText">Light: </label>
                 <input id="light-tog" type="checkbox" checked data-toggle="toggle">
             </div>
             <div class="col-3">
-                <img src="https://image.ibb.co/cczQjJ/realair.png" alt="air" height="300px">
+                <img id="air-img" src="https://image.ibb.co/cczQjJ/realair.png" alt="air" height="300px">
                 <br><br>
+                <label class="fontText">Air Conditioner: </label>
                 <input id="air-tog" type="checkbox" checked data-toggle="toggle">
             </div>
             <div class="col-3">
-                <img src="https://image.ibb.co/h80WPJ/realbell.png" alt="bell" height="300px">
+                <img id="bell-img" src="https://image.ibb.co/h80WPJ/realbell.png" alt="bell" height="300px">
                 <br><br>
+                <label class="fontText">Doorbell: </label>
                 <button id="ring-btn" type="button" class="btn btn-warning">Ring!</button>
             </div>
         </div>
