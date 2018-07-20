@@ -6,38 +6,37 @@ $(function () {
         else {
             mode = 0;
         }
-        // console.log("mode " + mode)
         $.ajax({
             type: "POST",
-            url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-house-mode/set",
+            url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-house-mode/set/",
             data: {
                 value: mode
             },
             dataType: "text",
             success: function (response) {
-
+                console.log(`mode   ${response}`)
             }
         });
     })
     $('#door-tog').change(function () {
         if ($(this).prop('checked') == true) {
             door_cm = 1;
-            // $('div#imageContainerimg').attr('src', 'https://image.ibb.co/h9Y7yd/realdoor.png');
+            $('#door-img').attr('src', 'https://image.ibb.co/h9Y7yd/realdoor.png');
         }
         else {
             door_cm = 0;
-            // $('div#imageContainerimg').attr('src', 'https://image.ibb.co/h9Y7yd/realdoor.png');
+            $('#door-img').attr('src', 'https://image.ibb.co/eaC9By/doorclose.png');
         }
         // console.log("door " + door_cm)
         $.ajax({
             type: "POST",
-            url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-door_cm/set",
+            url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-door-cm/set/",
             data: {
                 value: door_cm
             },
             dataType: "text",
             success: function (response) {
-
+                console.log(`door   ${response}`)
             }
         });
     })
@@ -52,13 +51,13 @@ $(function () {
         // console.log("light " + light_cm)
         $.ajax({
             type: "POST",
-            url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-light_cm/set",
+            url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-light-cm/set/",
             data: {
                 value: light_cm
             },
             dataType: "text",
             success: function (response) {
-
+                console.log(`light   ${response}`)
             }
         });
     })
@@ -73,27 +72,32 @@ $(function () {
         // console.log("air " + air_cm)
         $.ajax({
             type: "POST",
-            url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-air_cm/set",
+            url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-air-cm/set/",
             data: {
                 value: air_cm
             },
             dataType: "text",
             success: function (response) {
-
+                console.log(`air   ${response}`)
             }
         });
     })
-    $('#ring-btn').on('click', function () {
-        // console.log("ringg 1")
+    $('#ring-btn').change(function () {
+        if ($(this).prop('checked') == true) {
+            ring_cm = 1;
+        }
+        else {
+            ring_cm = 0;
+        }
         $.ajax({
             type: "POST",
-            url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-ring_cm/set",
+            url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-ring-cm/set/",
             data: {
-                value: 1
+                value: ring_cm
             },
             dataType: "text",
             success: function (response) {
-
+                console.log(`ring   ${response}`)
             }
         });
     })
@@ -104,7 +108,7 @@ $(function () {
             dataType: "text",
             success: function (response) {
                 $('#temp-val').html(`
-                <h1>${response}</h1> 
+                <label class="fontVal">${response}</label>
             `)
             },
             fail: function (response) {
@@ -117,7 +121,7 @@ $(function () {
             dataType: "text",
             success: function (response) {
                 $('#humi-val').html(`
-                <h1>${response}</h1> 
+                <label class="fontVal">${response}</label>
             `)
             },
             fail: function (response) {
@@ -129,8 +133,14 @@ $(function () {
             url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-intense-val/view",
             dataType: "text",
             success: function (response) {
+                if (response<0 || response>10000){
+                    response=0
+                }
+                else if(response>0 && response<300){
+
+                }
                 $('#intense-val').html(`
-                <h1>${response}</h1> 
+                <label class="fontVal">${response}</label>
             `)
             },
             fail: function (response) {
