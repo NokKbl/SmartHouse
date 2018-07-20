@@ -6,7 +6,7 @@ $(function () {
         else {
             mode = 0;
         }
-        console.log("mode " + mode)
+        // console.log("mode " + mode)
         $.ajax({
             type: "POST",
             url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-house-mode/set",
@@ -22,11 +22,13 @@ $(function () {
     $('#door-tog').change(function () {
         if ($(this).prop('checked') == true) {
             door_cm = 1;
+            // $('div#imageContainerimg').attr('src', 'https://image.ibb.co/h9Y7yd/realdoor.png');
         }
         else {
             door_cm = 0;
+            // $('div#imageContainerimg').attr('src', 'https://image.ibb.co/h9Y7yd/realdoor.png');
         }
-        console.log("door " + door_cm)
+        // console.log("door " + door_cm)
         $.ajax({
             type: "POST",
             url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-door_cm/set",
@@ -42,11 +44,12 @@ $(function () {
     $('#light-tog').change(function () {
         if ($(this).prop('checked') == true) {
             light_cm = 1;
+            // $('div#imageContainerimg').attr('src', 'https://image.ibb.co/noBhWy/reallight.png');
         }
         else {
             light_cm = 0;
         }
-        console.log("light " + light_cm)
+        // console.log("light " + light_cm)
         $.ajax({
             type: "POST",
             url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-light_cm/set",
@@ -62,11 +65,12 @@ $(function () {
     $('#air-tog').change(function () {
         if ($(this).prop('checked') == true) {
             air_cm = 1;
+            // $('div#imageContainerimg').attr('src', 'https://image.ibb.co/cczQjJ/realair.png');
         }
         else {
             air_cm = 0;
         }
-        console.log("air " + air_cm)
+        // console.log("air " + air_cm)
         $.ajax({
             type: "POST",
             url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-air_cm/set",
@@ -80,7 +84,7 @@ $(function () {
         });
     })
     $('#ring-btn').on('click', function () {
-        console.log("ringg 1")
+        // console.log("ringg 1")
         $.ajax({
             type: "POST",
             url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-ring_cm/set",
