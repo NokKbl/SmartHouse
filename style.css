@@ -1,17 +1,17 @@
 body{
     text-align: center;
-    padding: 100px;
-    height: 100vh;
+    height: 100%;
     opacity: 1.0;
-    /* background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%); */
-    /* background-image: linear-gradient(to right, #a8caba 0%, #5d4157 100%); */
-    /* background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%); */
-    background: transparentColor, url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/Ha0T59ZIiq18yt35/animated-background-with-rural-landscape-with-country-houses-trees-and-clouds-town-landscape-seamless-loop-animation_hvy55hau__F0000.png);
 }
 
 .bg{
     background: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/Ha0T59ZIiq18yt35/animated-background-with-rural-landscape-with-country-houses-trees-and-clouds-town-landscape-seamless-loop-animation_hvy55hau__F0000.png);
     background-size: cover;
+    opacity: 0.5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 .fontVal{
@@ -30,7 +30,7 @@ body{
 }
 
 .modeHeight{
-    height: 100px;
+    height: 200px;
 }
 
 .valHeight{
