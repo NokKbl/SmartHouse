@@ -1,10 +1,17 @@
 $(function () {
     $('#mode-tog').change(function () {
+        if ($(this).prop('checked') == true) {
+            mode = 1;
+        }
+        else {
+            mode = 0;
+        }
+        console.log(mode)
         $.ajax({
             type: "POST",
             url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-house-mode/set",
             data: {
-                value: 1
+                value: mode
             },
             dataType: "text",
             success: function (response) {
@@ -52,7 +59,6 @@ $(function () {
                 consloe.log(response)
             }
         });
-        /*
         $.ajax({
             type: "GET",
             url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-door-st/view",
@@ -106,5 +112,4 @@ $(function () {
             }
         });
     }, 1000)
-    */
-    })
+})
