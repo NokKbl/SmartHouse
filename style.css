@@ -3,8 +3,16 @@
     font-size: 100px;
 }
 
+.fontTitle{
+    font-family: "Comic Sans MS";
+    font-size: 30px;
+}
+
 body{
+    text-align: center;
     padding: 100px;
+    height: 100vh;
+    background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);
 }
 
 .toggle-off {
