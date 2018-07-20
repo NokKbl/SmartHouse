@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
         crossorigin="anonymous">
-        <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Hello, world!</title>
 </head>
@@ -18,39 +18,50 @@
     <div class="container">
         <div class="row">
             <div class="col-8"></div>
-            <div class="col-4"></div>
+            <div class="col-4">
+                <label>Mode: </label>
+                <br>
+                <label>Manual </label>
+                <input id="mode-tog" type="checkbox" checked data-toggle="toggle">
+                <label>Auto</label>
+            </div>
         </div>
         <div class="row">
             <div class="col-4">
-                <label>Temperature: </label><br>
+                <label>Temperature: </label>
+                <br>
                 <label id="temp-val" class="fontVal">XX</label>
                 <label>°C</label>
             </div>
             <div class="col-4">
-                <label>Humidity: </label><br>
-                <label id="humi-val" class="fontVal">XX</label>
+                <label>Humidity: </label>
+                <br>
+                <label id="humi-val" class="fontVal">00.0</label>
                 <label>%</label>
             </div>
             <div class="col-4">
-                    <label>Intensity: </label><br>
-                    <label id="intense-val" class="fontVal">XX</label>
-                    <label>lux</label>
+                <label>Intensity: </label>
+                <br>
+                <label id="intense-val" class="fontVal">00</label>
+                <label>lux</label>
             </div>
         </div>
         <div class="row">
             <div class="col-3">
                 <img src="https://image.ibb.co/h9Y7yd/realdoor.png" alt="door" height="300px">
-                <input id="door" type="checkbox" checked data-toggle="toggle">
+                <input id="door-tog" type="checkbox" checked data-toggle="toggle">
             </div>
             <div class="col-3">
-                    <img src="https://image.ibb.co/noBhWy/reallight.png" alt="light" height="300px">
-                    <input type="checkbox" checked data-toggle="toggle">
+                <img src="https://image.ibb.co/noBhWy/reallight.png" alt="light" height="300px">
+                <input id="light-tog" type="checkbox" checked data-toggle="toggle">
             </div>
-            <div class="col-3"><img src="https://image.ibb.co/cczQjJ/realair.png" alt="air" height="300px">
-                <input type="checkbox" checked data-toggle="toggle"></div>
             <div class="col-3">
-                    <img src="https://image.ibb.co/h80WPJ/realbell.png" alt="bell" height="300px">
-                    <button type="button" class="btn btn-warning">Ring!</button>
+                <img src="https://image.ibb.co/cczQjJ/realair.png" alt="air" height="300px">
+                <input id="air-tog" type="checkbox" checked data-toggle="toggle">
+            </div>
+            <div class="col-3">
+                <img src="https://image.ibb.co/h80WPJ/realbell.png" alt="bell" height="300px">
+                <button id="ring-btn" type="button" class="btn btn-warning">Ring!</button>
             </div>
         </div>
     </div>
@@ -59,9 +70,9 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
-    crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
     <script src="./app.js"></script>
 </body>
