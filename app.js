@@ -6,10 +6,30 @@ $(function () {
         else {
             mode = 0;
         }
-        console.log(mode)
+        console.log("mode " + mode)
         $.ajax({
             type: "POST",
             url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-house-mode/set",
+            data: {
+                value: mode
+            },
+            dataType: "text",
+            success: function (response) {
+
+            }
+        });
+    })
+    $('#door-tog').change(function () {
+        if ($(this).prop('checked') == true) {
+            door_cm = 1;
+        }
+        else {
+            door_cm = 0;
+        }
+        console.log("door " + door_cm)
+        $.ajax({
+            type: "POST",
+            url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-door_cm/set",
             data: {
                 value: mode
             },
