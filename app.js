@@ -80,7 +80,7 @@ $(function () {
         });
     })
     $('#ring-btn').on('click', function () {
-        console.log("ring 1")
+        console.log("ringg 1")
         $.ajax({
             type: "POST",
             url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-ring_cm/set",
