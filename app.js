@@ -31,7 +31,61 @@ $(function () {
             type: "POST",
             url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-door_cm/set",
             data: {
-                value: mode
+                value: door_cm
+            },
+            dataType: "text",
+            success: function (response) {
+
+            }
+        });
+    })
+    $('#light-tog').change(function () {
+        if ($(this).prop('checked') == true) {
+            light_cm = 1;
+        }
+        else {
+            light_cm = 0;
+        }
+        console.log("light " + light_cm)
+        $.ajax({
+            type: "POST",
+            url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-light_cm/set",
+            data: {
+                value: light_cm
+            },
+            dataType: "text",
+            success: function (response) {
+
+            }
+        });
+    })
+    $('#air-tog').change(function () {
+        if ($(this).prop('checked') == true) {
+            air_cm = 1;
+        }
+        else {
+            air_cm = 0;
+        }
+        console.log("air " + air_cm)
+        $.ajax({
+            type: "POST",
+            url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-air_cm/set",
+            data: {
+                value: air_cm
+            },
+            dataType: "text",
+            success: function (response) {
+
+            }
+        });
+    })
+    $('#ring-btn').on('click', function () {
+        console.log("ring 1")
+        $.ajax({
+            type: "POST",
+            url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-ring_cm/set",
+            data: {
+                value: 1
             },
             dataType: "text",
             success: function (response) {
