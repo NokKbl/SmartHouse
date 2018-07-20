@@ -21,13 +21,12 @@ $(function () {
     $('#door-tog').change(function () {
         if ($(this).prop('checked') == true) {
             door_cm = 1;
-            $('#door-img').attr('src', 'https://image.ibb.co/h9Y7yd/realdoor.png');
+            $('#door-img').html(`<img src="https://image.ibb.co/h9Y7yd/realdoor.png" alt="door" height="300px">`)
         }
         else {
             door_cm = 0;
-            $('#door-img').attr('src', 'https://image.ibb.co/eaC9By/doorclose.png');
+            $('#door-img').html(`<img src="https://image.ibb.co/eaC9By/doorclose.png" alt="door" height="300px">`)
         }
-        // console.log("door " + door_cm)
         $.ajax({
             type: "POST",
             url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-door-cm/set/",
@@ -43,12 +42,12 @@ $(function () {
     $('#light-tog').change(function () {
         if ($(this).prop('checked') == true) {
             light_cm = 1;
-            // $('div#imageContainerimg').attr('src', 'https://image.ibb.co/noBhWy/reallight.png');
+            $('#light-img').html(`<img src="https://image.ibb.co/noBhWy/reallight.png" alt="light" height="300px">`)
         }
         else {
             light_cm = 0;
+            $('#light-img').html(`<img src="https://image.ibb.co/eHs9By/lightout.png" alt="light" height="300px">`)
         }
-        // console.log("light " + light_cm)
         $.ajax({
             type: "POST",
             url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-light-cm/set/",
@@ -64,12 +63,12 @@ $(function () {
     $('#air-tog').change(function () {
         if ($(this).prop('checked') == true) {
             air_cm = 1;
-            // $('div#imageContainerimg').attr('src', 'https://image.ibb.co/cczQjJ/realair.png');
+            $('#air-img').html(`<img src="https://image.ibb.co/cczQjJ/realair.png" alt="air" height="300px">`)
         }
         else {
             air_cm = 0;
+            $('#air-img').html(`<img src=" https://image.ibb.co/gAJhWy/closeair.png" alt="air" height="300px">`)
         }
-        // console.log("air " + air_cm)
         $.ajax({
             type: "POST",
             url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-air-cm/set/",
@@ -85,9 +84,11 @@ $(function () {
     $('#ring-btn').change(function () {
         if ($(this).prop('checked') == true) {
             ring_cm = 1;
+            $('#bell-img').html(`<img src="https://image.ibb.co/khiudd/ringbell.png" alt="bell" height="300px">`)
         }
         else {
             ring_cm = 0;
+            $('#bell-img').html(`<img src="https://image.ibb.co/h80WPJ/realbell.png" alt="bell" height="300px">`)
         }
         $.ajax({
             type: "POST",
@@ -133,11 +134,14 @@ $(function () {
             url: "http://ecourse.cpe.ku.ac.th:1515/api/tonpalm-intense-val/view",
             dataType: "text",
             success: function (response) {
-                if (response<0 || response>10000){
+                if (response<0 || response>100000){
                     response=0
                 }
                 else if(response>0 && response<300){
-
+                    $('#bgg').html(`<div style="background: url(https://image.ibb.co/ef4Zdd/nigth.png);"></div>`)
+                }
+                else{
+                    $('#bgg').html(`<div style="background: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/Ha0T59ZIiq18yt35/animated-background-with-rural-landscape-with-country-houses-trees-and-clouds-town-landscape-seamless-loop-animation_hvy55hau__F0000.png);"></div>`)
                 }
                 $('#intense-val').html(`
                 <label class="fontVal">${response}</label>
